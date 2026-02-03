@@ -1,0 +1,47 @@
+name: API Automation CI
+
+# Trigger: Run this pipeline whenever code is pushed to 'main'
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest  # We ask GitHub for a Linux computer
+
+    steps:
+    # 1. Download our code to the runner
+    - uses: actions/checkout@v3
+
+    # 2. Install Python 3.9
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.9"
+
+    # 3. Install dependencies from our list
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # 4. Run the Tests!
+    # We inject the Secrets into the environment so os.getenv() works
+    - name: Run Pytest
+      env:
+        BOOKING: ${{ secrets.BOOKING }}
+        ADMIN_USER: ${{ secrets.ADMIN_USER }}
+        ADMIN_PASS: ${{ secrets.ADMIN_PASS }}
+        CREATE_TOKEN: ${{ secrets.CREATE_TOKEN }}
+      run: |
+        pytest -v -s --html=report.html --self-contained-html
+    
+    # 5. (Optional) Upload the HTML Report so we can see it
+    - name: Upload Test Report
+      if: always() # Run even if tests fail
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-report
+        path: report.html
