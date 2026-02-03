@@ -1,0 +1,35 @@
+[
+    {
+        "firstname": "Sumit",
+        "lastname": "Kumar",
+        "totalprice": 150,
+        "depositpaid": true,
+        "bookingdates": {"checkin": "2026-02-01", "checkout": "2026-02-05"},
+        "additionalneeds": "Breakfast"
+    },
+    {
+        "firstname": "Amit",
+        "lastname": "Jain",
+        "totalprice": 200,
+        "depositpaid": false,
+        "bookingdates": {"checkin": "2026-03-10", "checkout": "2026-03-15"},
+        "additionalneeds": "Late Checkout"
+    },
+    {
+        "firstname": "Rahul",
+        "lastname": "Dev",
+        "totalprice": 300,
+        "depositpaid": true,
+        "bookingdates": {"checkin": "2026-05-20", "checkout": "2026-05-22"},
+        "additionalneeds": "Extra Bed"
+    },
+    {
+        "firstname": "Akash",
+        "lastname": "Gill",
+        "totalprice": 475,
+        "depositpaid": false,
+        "bookingdates": {"checkin": "2026-05-20", "checkout": "2026-05-24"},
+        "additionalneeds": "Daily Housekeeping at 1000"
+    }
+
+]

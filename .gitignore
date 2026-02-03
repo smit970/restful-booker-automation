@@ -1,0 +1,20 @@
+# .gitignore
+
+# 1. Security: Never upload secrets
+.env
+
+# 2. Virtual Environment: Too heavy, we reinstall using requirements.txt
+.venv/
+venv/
+bin/
+Scripts/
+
+# 3. Python Junk
+__pycache__/
+*.pyc
+pytest_cache/
+.pytest_cache/
+
+# 4. Reports (We generate these fresh every time)
+*.html
+assets/
