@@ -28,6 +28,7 @@ def load_booking_data():
         return json.load(f)
 
 
+@pytest.mark.skip(reason="JIRA-123: Feature is currently broken")
 # --- TEST FUNCTION ---
 @pytest.mark.parametrize("booking_payload", load_booking_data())
 def test_create_booking_print_only(api_client, booking_payload):

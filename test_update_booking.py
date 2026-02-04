@@ -41,6 +41,7 @@ def get_auth_token(api_client):
     return response.json()["token"]
 
 
+@pytest.mark.smoke
 # --- TEST FUNCTION ---
 def test_update_bookings(api_client, payload):
     url = os.getenv("BOOKING")

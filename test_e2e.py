@@ -3,6 +3,8 @@ import os
 import json
 
 
+@pytest.mark.regression
+@pytest.mark.e2e
 # We use a Class to group the steps together
 class TestBookingFlow:
 
