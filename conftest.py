@@ -28,3 +28,29 @@ def auth_token(api_client):
 
     response = api_client.post(url, json={"username": username, "password": password})
     return response.json()["token"]
+
+
+import pytest
+from faker import Faker
+
+# Initialize Faker once
+fake = Faker()
+
+
+@pytest.fixture
+def random_booking_data():
+    """
+    Generates a fresh, random payload for every test function.
+    """
+    return {
+        "firstname": fake.first_name(),
+        "lastname": fake.last_name(),
+        "totalprice": fake.random_int(min=100, max=5000),
+        "depositpaid": fake.boolean(),
+        "bookingdates": {
+            # Generate a date this year, convert to String YYYY-MM-DD
+            "checkin": fake.date_this_year().strftime("%Y-%m-%d"),
+            "checkout": fake.date_this_year().strftime("%Y-%m-%d"),
+        },
+        "additionalneeds": fake.sentence(nb_words=3),
+    }

@@ -1,35 +1,35 @@
 [
     {
-        "firstname": "Sumit",
+        "firstname": "Ravi",
         "lastname": "Kumar",
-        "totalprice": 150,
-        "depositpaid": true,
-        "bookingdates": {"checkin": "2026-02-01", "checkout": "2026-02-05"},
+        "totalprice": 1230,
+        "depositpaid": false,
+        "bookingdates": {"checkin": "2026-02-05", "checkout": "2026-02-10"},
         "additionalneeds": "Breakfast"
     },
     {
-        "firstname": "Amit",
+        "firstname": "Rahul",
         "lastname": "Jain",
         "totalprice": 200,
         "depositpaid": false,
-        "bookingdates": {"checkin": "2026-03-10", "checkout": "2026-03-15"},
+        "bookingdates": {"checkin": "2026-02-10", "checkout": "2026-02-15"},
         "additionalneeds": "Late Checkout"
     },
     {
-        "firstname": "Rahul",
+        "firstname": "Abhinav",
         "lastname": "Dev",
-        "totalprice": 300,
+        "totalprice": 2600,
         "depositpaid": true,
-        "bookingdates": {"checkin": "2026-05-20", "checkout": "2026-05-22"},
+        "bookingdates": {"checkin": "2026-05-20", "checkout": "2026-05-28"},
         "additionalneeds": "Extra Bed"
     },
     {
         "firstname": "Akash",
-        "lastname": "Gill",
-        "totalprice": 475,
+        "lastname": "Singh",
+        "totalprice": 1900,
         "depositpaid": false,
-        "bookingdates": {"checkin": "2026-05-20", "checkout": "2026-05-24"},
-        "additionalneeds": "Daily Housekeeping at 1000"
+        "bookingdates": {"checkin": "2026-05-12", "checkout": "2026-05-17"},
+        "additionalneeds": "Daily Housekeeping at 10:00 am"
     }
 
 ]
